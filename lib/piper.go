@@ -75,7 +75,7 @@ func RunPiper(
 	}
 
 	// Construct the command
-	cmd := exec.Command(piperExecutable, "--model", modelAbs, "--output_file", abs)
+	cmd := exec.Command(piperExecutable, "--model", modelAbs, "--output_file", abs, "--cuda")
 	cmd.Dir = piperDir
 	cmd.Stdin = file
 	cmd.Stdout = os.Stdout
